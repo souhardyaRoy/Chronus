@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Airtribe\\Chronos\\kafka consumer for immidiate jobs\\logs\\.790ee8a566969c23737dcea1553dd65cb26db81c-audit.json",
+    "files": [
+        {
+            "date": 1709054785103,
+            "name": "D:\\Airtribe\\Chronos\\kafka consumer for immidiate jobs\\logs\\combined.log.2024-02-27",
+            "hash": "0d08ea8d62665a399ded1750de9daca987ffad4a3e13756d926a263e647e9a47"
+        },
+        {
+            "date": 1709221341756,
+            "name": "D:\\Airtribe\\Chronos\\kafka consumer for immidiate jobs\\logs\\combined.log.2024-02-29",
+            "hash": "223f4f47c9e2d3abbe2f8a0614df4f4c485fb944353eeb92a664036345daa201"
+        }
+    ],
+    "hashType": "sha256"
+}

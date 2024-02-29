@@ -1,0 +1,8 @@
+INFO: 2024-02-29 21:33:19 - "Received future scheduled task with recursion details:  a5"
+INFO: 2024-02-29 21:33:29 - "Recursive Task started"
+INFO: 2024-02-29 21:33:31 - "Recursion 1 completed successfully"
+INFO: 2024-02-29 21:33:39 - "Recursive Task started"
+INFO: 2024-02-29 21:33:41 - "Recursion 2 completed successfully"
+INFO: 2024-02-29 21:33:49 - "Recursive Task started"
+INFO: 2024-02-29 21:33:49 - "All recursions completed"
+INFO: 2024-02-29 21:33:49 - "Task completed for job id a5"

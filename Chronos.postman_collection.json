@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "f208df21-9aba-43ea-932a-561f6d635662",
+		"name": "Chronos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25674149"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ram\",\r\n    \"password\": \"abc123\",\r\n    \"email\": \"abc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"abc123\",\r\n    \"email\": \"abc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUwYTcwYmU2MzJmYjE4ZjllODllOGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDkyMjE2NDcsImV4cCI6MTcwOTIyNTI0N30.gwzW7mLoNO4i6y-EMeuCefRzOyyQm3xXhozjKHOitL0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jobId\": \"a5\",\r\n    \"email\": \"example@example.com\",\r\n    \"command\": \"node\",\r\n    \"args\": [\r\n        \"D:/Airtribe/capstone/cspstonePoc/script.js\"\r\n    ],\r\n    \"isImmediate\": false,\r\n    \"isRecurring\": true\r\n    ,\r\n    \"recursionDetails\": {\r\n        \"totalAmountOfRecursion\": 2,\r\n        \"intervalInSeconds\": 10\r\n    }\r\n    ,\r\n    \"isFutureSchedule\": true,\r\n    \"futureTimeAndDate\": \"Feb 26 2024 09:34 PM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tasks by user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWRjYzBlYzNiMjI1OTUwNmVkMDRiM2YiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDg5NjYxMzIsImV4cCI6MTcwODk2OTczMn0.CuGYvqSplGtaMkdlI72v4_emEasDFfznFnKVGHVr5dU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7000/task/abc@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"task",
+						"abc@gmail.com"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "abc@gmail.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task by job id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ4ZDVjMDk2YTFhMjI0ZmMzYTQ3ZjciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDg3MDkzMTgsImV4cCI6MTcwODcxMjkxOH0.xkeoS5d7IC5whyH4u2e4UjnJ_cWmu78iDb0VDQRmrIU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"command\": \"run_task\",\r\n    \"args\": [\r\n        \"D:/Airtribe/capstone/cspstonePoc/script.js\"\r\n    ],\r\n    \"isImmediate\": false,\r\n    \"isRecurring\": true,\r\n    \"recursionDetails\": {\r\n        \"totalAmountOfRecursion\": 10,\r\n        \"intervalInSeconds\": 3600\r\n    },\r\n    \"isFutureSchedule\": true,\r\n    \"futureTimeAndDate\": \"2024-02-20T10:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/task/12345",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"task",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task by job id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ4ZDVjMDk2YTFhMjI0ZmMzYTQ3ZjciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDg3MDkzMTgsImV4cCI6MTcwODcxMjkxOH0.xkeoS5d7IC5whyH4u2e4UjnJ_cWmu78iDb0VDQRmrIU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7000/task/12346",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"task",
+						"12346"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

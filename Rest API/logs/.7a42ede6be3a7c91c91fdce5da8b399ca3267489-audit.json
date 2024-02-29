@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Airtribe\\Chronos\\Rest API\\logs\\.7a42ede6be3a7c91c91fdce5da8b399ca3267489-audit.json",
+    "files": [
+        {
+            "date": 1709052842831,
+            "name": "D:\\Airtribe\\Chronos\\Rest API\\logs\\combined.log.2024-02-27",
+            "hash": "2409d69c15164bd53d85f3200815a01bbe544e337cf7f92f47706c42e79e52bd"
+        },
+        {
+            "date": 1709221018264,
+            "name": "D:\\Airtribe\\Chronos\\Rest API\\logs\\combined.log.2024-02-29",
+            "hash": "7c350dc5cd796e083a52d4666ad279d26ef257887516b4f199050886a3bb9cc2"
+        }
+    ],
+    "hashType": "sha256"
+}
